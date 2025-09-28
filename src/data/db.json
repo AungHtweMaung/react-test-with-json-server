@@ -1,0 +1,16 @@
+{
+    "trips" : [
+        {
+            "name" : "3 nights in Yangon",
+            "price" : 300000
+        },
+        {
+            "name" : "1 night in NayPyitTaw",
+            "price" : 300000
+        },
+        {
+            "name" : "9 nights in Mandalay",
+            "price" : 300000
+        }
+    ]
+}
