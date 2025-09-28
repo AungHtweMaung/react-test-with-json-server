@@ -1,16 +1,34 @@
 {
     "trips" : [
         {
+            "id" : 1,
             "name" : "3 nights in Yangon",
-            "price" : 300000
+            "price" : 300000,
+            "location": "Myanmar"
         },
         {
-            "name" : "1 night in NayPyitTaw",
-            "price" : 300000
+            "id" : 2,
+            "name" : "2 nights in Mandalay",
+            "price" : 300000,
+            "location": "Myanmar"
         },
         {
-            "name" : "9 nights in Mandalay",
-            "price" : 300000
+            "id" : 3,
+            "name" : "5 nights in Naypyitaw",
+            "price" : 900000,
+            "location": "Myanmar"
+        },
+        {
+            "id" : 4,
+            "name" : "1 night in Bangkok",
+            "price" : 300000,
+            "location": "Thailand"
+        },
+        {
+            "id" : 5,
+            "name" : "9 nights in Tokyo",
+            "price" : 2000000,
+            "location" : "Japan"
         }
     ]
 }
