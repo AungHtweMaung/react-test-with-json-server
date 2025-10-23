@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EasyMart - Demo UI</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --green:#1f7a3a; /* deep green */
+      --accent:#ff6b3d; /* orange */
+      --muted:#f6f7f8;
+      --card:#ffffff;
+      --soft:#eef6ec;
+    }
+    body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial,"Noto Sans";background:var(--muted);}
+    .navbar{background:#fff;}
+    .brand{color:var(--accent);font-weight:700}
+    .hero{background:linear-gradient(90deg,#11411f 0%, #1f7a3a 100%);color:#fff;border-radius:18px;padding:48px;}
+    .hero .btn-accent{background:var(--accent);border:none;color:#fff}
+    .category .card{border-radius:14px;background:linear-gradient(180deg,#fff,#fbfbfb);box-shadow:0 6px 18px rgba(31,122,58,0.06);}
+    .product-card{background:var(--card);border-radius:12px;border:1px solid #eef2ee;padding:16px;}
+    .product-img{height:110px;width:110px;object-fit:cover;border-radius:8px}
+    .chip{border-radius:10px;padding:4px 10px;background:#fff;box-shadow:0 2px 6px rgba(0,0,0,0.03);}
+    .feature-banner{border-radius:14px;padding:22px}
+    .blog-card{border-radius:12px;border:1px solid #eee;padding:12px;background:#fff}
+    .subscribe-banner{background:linear-gradient(90deg,#11411f 0%, #1f7a3a 100%);color:#fff;border-radius:14px;padding:28px}
+    footer{font-size:14px;color:#6b6b6b}
+    /* small helpers */
+    .badge-green{background:var(--green);color:#fff;border-radius:8px;padding:6px 10px}
+    @media (max-width:767px){.hero{padding:24px}}
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg shadow-sm">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center" href="#"><img src="/mnt/data/6334d3f9d9eca00ae99d617ce7604781.webp" alt="logo" style="height:36px;object-fit:contain;margin-right:8px"> <span class="brand">EasyMart</span></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMain">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+        <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#categories">Catalog</a></li>
+        <li class="nav-item"><a class="nav-link" href="#products">Shop</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        <li class="nav-item ms-3"><button class="btn btn-outline-success">Sign In</button></li>
+        <li class="nav-item ms-2"><button class="btn btn-success">Sign Up</button></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="container my-5">
+  <div class="row gx-4 align-items-center">
+    <div class="col-lg-7">
+      <div class="hero">
+        <div class="d-flex align-items-center mb-3">
+          <span class="badge-green me-3">Grocery Delivery Service</span>
+          <small>Fast &amp; Fresh</small>
+        </div>
+        <h1 class="display-6 fw-bold">Fastest <span style="color:var(--accent)">Delivery</span> &amp; Easy Pickup.</h1>
+        <p class="lead">Get fresh groceries and essential items delivered to your door with reliable, same-day service.</p>
+        <div class="d-flex gap-3">
+          <button class="btn btn-accent btn-lg">Shop Now</button>
+          <button class="btn btn-outline-light btn-lg">Our Services</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-5 text-center">
+      <img src="/mnt/data/6334d3f9d9eca00ae99d617ce7604781.webp" class="img-fluid rounded" alt="basket">
+    </div>
+  </div>
+</section>
+
+<!-- CATEGORIES -->
+<section id="categories" class="container my-4">
+  <h4 class="mb-3">Shop By Category</h4>
+  <div class="row g-3 category">
+    <div class="col-6 col-md-3 col-lg-1">
+      <div class="card p-3 text-center">
+        <img src="/mnt/data/6334d3f9d9eca00ae99d617ce7604781.webp" class="img-fluid" style="height:50px;object-fit:cover">
+        <small class="d-block mt-2">Vegetable</small>
+      </div>
+    </div>
+    <div class="col-6 col-md-3 col-lg-1">
+      <div class="card p-3 text-center">
+        <img src="/mnt/data/6334d3f9d9eca00ae99d617ce7604781.webp" class="img-fluid" style="height:50px;object-fit:cover">
+        <small class="d-block mt-2">Seafood</small>
+      </div>
+    </div>
+    <div class="col-6 col-md-3 col-lg-1">
+      <div class="card p-3 text-center">
+        <img src="/mnt/data/6334d3f9d9eca00ae99d617ce7604781.webp" class="img-fluid" style="height:50px;object-fit:cover">
+        <small class="d-block mt-2">Eggs</small>
+      </div>
+    </div>
+    <div class="col-6 col-md-3 col-lg-1">
+      <div class="card p-3 text-center">
+        <img src="/mnt/data/6334d3f9d9eca00ae99d617ce7604781.webp" class="img-fluid" style="height:50px;object-fit:cover">
+        <small class="d-block mt-2">Cheese</small>
+      </div>
+    </div>
+
+    <div class="col-6 col-md-3 col-lg-1">
+      <div class="card p-3 text-center">
+        <img src="/mnt/data/6334d3f9d9eca00ae99d617ce7604781.webp" class="img-fluid" style="height:50px;object-fit:cover">
+        <small class="d-block mt-2">Fruit</small>
+      </div>
+    </div>
+
+    <div class="col-6 col-md-3 col-lg-1 d-none d-lg-block">
+      <div class="card p-3 text-center">
+        <img src="/mnt/data/6334d3f9d9eca00ae99d617ce7604781.webp" class="img-fluid" style="height:50px;object-fit:cover">
+        <small class="d-block mt-2">Beef</small>
+      </div>
+    </div>
+
+    <div class="col-6 col-md-3 col-lg-1 d-none d-lg-block">
+      <div class="card p-3 text-center">
+        <img src="/mnt/data/6334d3f9d9eca00ae99d617ce7604781.webp" class="img-fluid" style="height:50px;object-fit:cover">
+        <small class="d-block mt-2">Milk</small>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURE BANNERS -->
+<section class="container my-4">
+  <div class="row g-3">
+    <div class="col-md-6">
+      <div class="feature-banner bg-light p-4 rounded d-flex align-items-center">
+        <div>
+          <h5>Everyday fresh &amp; clean with our products</h5>
+          <p class="mb-2">Quality produce delivered right to you.</p>
+          <button class="btn btn-accent">Shop Now</button>
+        </div>
+        <div class="ms-auto d-none d-md-block">
+          <img src="/mnt/data/6334d3f9d9eca00ae99d617ce7604781.webp" style="height:110px;border-radius:10px">
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="feature-banner" style="background:linear-gradient(180deg,#dff3da,#bff0b2)">
+        <div class="d-flex align-items-center justify-content-between">
+          <div>
+            <h5>Make your breakfast healthy and easy</h5>
+            <p class="mb-2">Find healthy breakfast options and recipes.</p>
+            <button class="btn btn-accent">Shop Now</button>
+          </div>
+          <div class="d-none d-md-block ms-3">
+            <img src="/mnt/data/6334d3f9d9eca00ae99d617ce7604781.webp" style="height:110px;border-radius:10px">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTS GRID -->
+<section id="products" class="container my-4">
+  <div class="d-flex justify-content-between align-items-center mb-3">
+    <h5>Our All Products</h5>
+    <small class="text-muted">View All</small>
+  </div>
+
+  <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-3">
+    <!-- repeat product cards -->
+    <!-- we'll show 12 cards -->
+    
+    ${''/* placeholders - replace image paths as needed */}
+    <div class="col">
+      <div class="product-card h-100 d-flex flex-column">
+        <div class="d-flex align-items-center gap-3">
+          <img src="/mnt/data/6334d3f9d9eca00ae99d617ce7604781.webp" class="product-img">
+          <div>
+            <h6 class="mb-1">Organic Big Sweet Pepper</h6>
+            <small class="text-muted">1000gm</small>
+            <div class="mt-2 d-flex align-items-center gap-2">
+              <strong>$24.00</strong>
+              <button class="btn btn-sm btn-outline-success ms-auto">+</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="product-card h-100 d-flex flex-column">
+        <div class="d-flex align-items-center gap-3">
+          <img src="/mnt/data/6334d3f9d9eca00ae99d617ce7604781.webp" class="product-img">
+          <div>
+            <h6 class="mb-1">Lipton Lemon Green Tea</h6>
+            <small class="text-muted">100g</small>
+            <div class="mt-2 d-flex align-items-center gap-2">
+              <strong>$24.00</strong>
+              <button class="btn btn-sm btn-outline-success ms-auto">+</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- copy more cards quickly -->
+    <!-- using same structure for brevity -->
+    <div class="col"><div class="product-card h-100 d-flex flex-column"><div class="d-flex align-items-center gap-3"><img src="/mnt/data/6334d3f9d9eca00ae99d617ce7604781.webp" class="product-img"><div><h6 class="mb-1">Lemon Big Imported</h6><small class="text-muted">500g</small><div class="mt-2 d-flex align-items-center gap-2"><strong>$24.00</strong><button class="btn btn-sm btn-outline-success ms-auto">+</button></div></div></div></div></div>
+    <div class="col"><div class="product-card h-100 d-flex flex-column"><div class="d-flex align-items-center gap-3"><img src="/mnt/data/6334d3f9d9eca00ae99d617ce7604781.webp" class="product-img"><div><h6 class="mb-1">Organic Avocado</h6><small class="text-muted">1 pc</small><div class="mt-2 d-flex align-items-center gap-2"><strong>$24.00</strong><button class="btn btn-sm btn-outline-success ms-auto">+</button></div></div></div></div></div>
+
+    <div class="col"><div class="product-card h-100 d-flex flex-column"><div class="d-flex align-items-center gap-3"><img src="/mnt/data/6334d3f9d9eca00ae99d617ce7604781.webp" class="product-img"><div><h6 class="mb-1">Garden Frozen Chicken</h6><small class="text-muted">1kg</small><div class="mt-2 d-flex align-items-center gap-2"><strong>$24.00</strong><button class="btn btn-sm btn-outline-success ms-auto">+</button></div></div></div></div></div>
+
+    <div class="col"><div class="product-card h-100 d-flex flex-column"><div class="d-flex align-items-center gap-3"><img src="/mnt/data/6334d3f9d9eca00ae99d617ce7604781.webp" class="product-img"><div><h6 class="mb-1">Organic Green Pepper</h6><small class="text-muted">200g</small><div class="mt-2 d-flex align-items-center gap-2"><strong>$24.00</strong><button class="btn btn-sm btn-outline-success ms-auto">+</button></div></div></div></div></div>
+
+    <div class="col"><div class="product-card h-100 d-flex flex-column"><div class="d-flex align-items-center gap-3"><img src="/mnt/data/6334d3f9d9eca00ae99d617ce7604781.webp" class="product-img"><div><h6 class="mb-1">Black Seed</h6><small class="text-muted">250g</small><div class="mt-2 d-flex align-items-center gap-2"><strong>$24.00</strong><button class="btn btn-sm btn-outline-success ms-auto">+</button></div></div></div></div></div>
+
+    <div class="col"><div class="product-card h-100 d-flex flex-column"><div class="d-flex align-items-center gap-3"><img src="/mnt/data/6334d3f9d9eca00ae99d617ce7604781.webp" class="product-img"><div><h6 class="mb-1">Cucumber Fresh</h6><small class="text-muted">300g</small><div class="mt-2 d-flex align-items-center gap-2"><strong>$24.00</strong><button class="btn btn-sm btn-outline-success ms-auto">+</button></div></div></div></div></div>
+
+    <div class="col"><div class="product-card h-100 d-flex flex-column"><div class="d-flex align-items-center gap-3"><img src="/mnt/data/6334d3f9d9eca00ae99d617ce7604781.webp" class="product-img"><div><h6 class="mb-1">Sunflower Oil 1.5L</h6><small class="text-muted">1.5L</small><div class="mt-2 d-flex align-items-center gap-2"><strong>$24.00</strong><button class="btn btn-sm btn-outline-success ms-auto">+</button></div></div></div></div></div>
+
+    <div class="col"><div class="product-card h-100 d-flex flex-column"><div class="d-flex align-items-center gap-3"><img src="/mnt/data/6334d3f9d9eca00ae99d617ce7604781.webp" class="product-img"><div><h6 class="mb-1">Beef Roast</h6><small class="text-muted">400g</small><div class="mt-2 d-flex align-items-center gap-2"><strong>$24.00</strong><button class="btn btn-sm btn-outline-success ms-auto">+</button></div></div></div></div></div>
+
+    <div class="col"><div class="product-card h-100 d-flex flex-column"><div class="d-flex align-items-center gap-3"><img src="/mnt/data/6334d3f9d9eca00ae99d617ce7604781.webp" class="product-img"><div><h6 class="mb-1">Tomato Ketchup</h6><small class="text-muted">12 pack</small><div class="mt-2 d-flex align-items-center gap-2"><strong>$24.00</strong><button class="btn btn-sm btn-outline-success ms-auto">+</button></div></div></div></div></div>
+
+  </div>
+</section>
+
+<!-- BRANDS -->
+<section class="container my-4 text-center">
+  <div class="row align-items-center">
+    <div class="col-6 col-md-2"><img src="/mnt/data/6334d3f9d9eca00ae99d617ce7604781.webp" class="img-fluid" style="height:40px;object-fit:contain"></div>
+    <div class="col-6 col-md-2"><img src="/mnt/data/6334d3f9d9eca00ae99d617ce7604781.webp" class="img-fluid" style="height:40px;object-fit:contain"></div>
+    <div class="col-6 col-md-2"><img src="/mnt/data/6334d3f9d9eca00ae99d617ce7604781.webp" class="img-fluid" style="height:40px;object-fit:contain"></div>
+    <div class="col-6 col-md-2"><img src="/mnt/data/6334d3f9d9eca00ae99d617ce7604781.webp" class="img-fluid" style="height:40px;object-fit:contain"></div>
+    <div class="col-6 col-md-2"><img src="/mnt/data/6334d3f9d9eca00ae99d617ce7604781.webp" class="img-fluid" style="height:40px;object-fit:contain"></div>
+  </div>
+</section>
+
+<!-- BLOG -->
+<section class="container my-4">
+  <h5 class="mb-3">Latest News Blog</h5>
+  <div class="row g-3">
+    <div class="col-md-3"><div class="blog-card"><img src="/mnt/data/6334d3f9d9eca00ae99d617ce7604781.webp" class="img-fluid rounded mb-2"><h6>Experience The Essence</h6><small class="text-muted">by Admin · 2 min read</small></div></div>
+    <div class="col-md-3"><div class="blog-card"><img src="/mnt/data/6334d3f9d9eca00ae99d617ce7604781.webp" class="img-fluid rounded mb-2"><h6>Discover The Secrets</h6><small class="text-muted">by Admin · 3 min read</small></div></div>
+    <div class="col-md-3"><div class="blog-card"><img src="/mnt/data/6334d3f9d9eca00ae99d617ce7604781.webp" class="img-fluid rounded mb-2"><h6>Dive Into Bold Flavors</h6><small class="text-muted">by Admin · 4 min read</small></div></div>
+    <div class="col-md-3"><div class="blog-card"><img src="/mnt/data/6334d3f9d9eca00ae99d617ce7604781.webp" class="img-fluid rounded mb-2"><h6>Vegetarian Menu Options</h6><small class="text-muted">by Admin · 2 min read</small></div></div>
+  </div>
+</section>
+
+<!-- SUBSCRIBE -->
+<section class="container my-4">
+  <div class="subscribe-banner d-flex align-items-center justify-content-between">
+    <div>
+      <h4>Get update regularly and best offer subscribe us</h4>
+      <p class="mb-0">Enter your email to get the latest deals and offers.</p>
+    </div>
+    <div class="d-flex align-items-center gap-2">
+      <input class="form-control" style="min-width:300px" placeholder="your@email.com">
+      <button class="btn btn-accent">Subscribe</button>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="container py-5">
+  <div class="row">
+    <div class="col-md-4">
+      <h5 class="brand">EasyMart</h5>
+      <p class="text-muted">Your friendly neighborhood grocery store online.</p>
+    </div>
+    <div class="col-md-2"><h6>About</h6><ul class="list-unstyled"><li>About us</li><li>Recipe</li><li>Download</li></ul></div>
+    <div class="col-md-2"><h6>Company</h6><ul class="list-unstyled"><li>Our Recipe</li><li>Subscribe Us</li><li>FAQ</li></ul></div>
+    <div class="col-md-2"><h6>Support</h6><ul class="list-unstyled"><li>Account</li><li>Support center</li><li>Feedback</li></ul></div>
+    <div class="col-md-2"><h6>Get in Touch</h6><p class="text-muted">4517 Washington Ave.<br>Manchester, Kentucky 39495</p></div>
+  </div>
+  <div class="text-center mt-4">&copy; 2025 EasyMart. All right reserved.</div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

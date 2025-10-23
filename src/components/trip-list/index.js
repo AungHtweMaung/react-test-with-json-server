@@ -5,13 +5,12 @@ import useFetch from '../../hooks/useFetch'
 export default function Index() {
     // let [trips, setTrips] = useState([]);
     let [location, setLocation] = useState('All');
-
+    
     let [url, setUrl] = useState('http://localhost:3001/trips');
     // let url = `http://localhost:3001/trips?location=${location}`;
+    
 
-    let {data : trips, loading, error} = useFetch(url);
-    // console.log(trips);
-
+    let { data : trips , loading , error} = useFetch(url, {type : "GET"});
 
     let filterByLocation = (e) => {
         const selectedLocation = e.target.value;
@@ -25,31 +24,30 @@ export default function Index() {
     }
 
     return (
-    
           <div className='container'>
              <div className="flex-container">
-                 <h1>Ready To Go?</h1>
-                 { loading && <p>loading ...</p> }
-                 { error && <p>{error}</p> }
-              {/* <button>All</button> */}
-              { !loading && !error && trips &&
-                <>
-                  <select value={location} onChange={filterByLocation}>
-                    <option value="">All</option>
-                    <option value="Myanmar">Myanmar</option>
-                    <option value="Japan">Japan</option>
-                    <option value="Thailand">Thailand</option>
-                  </select>
-                  <ul className='trips-list'>
-                    {trips.map(trip => (
-                      <li key={trip.id} className='trip'>
-                        <h3>{trip.name}</h3>
-                        <p>price - {trip.price} mmk</p>
-                      </li>
-                    ))}
-                  </ul>
-                </>
-              }
+                { loading && <p>loading ...</p> }
+                { error && <p>{ error }</p> }
+                { !loading && !error && <>
+                  <h1>Ready To Go?</h1>
+                  {/* <button>All</button> */}
+                  
+                      <select value={location} onChange={filterByLocation}>
+                        <option value="">All</option>
+                        <option value="Myanmar">Myanmar</option>
+                        <option value="Japan">Japan</option>
+                        <option value="Thailand">Thailand</option>
+                      </select>
+                      <ul className='trips-list'>
+                        {trips && trips.map(trip => (
+                          <li key={trip.id} className='trip'>
+                            <h3>{trip.name}</h3>
+                            <p>price - {trip.price} mmk</p>
+                          </li>
+                        ))}
+                      </ul>
+                </> }
+                
              </div>
           </div>
     )
